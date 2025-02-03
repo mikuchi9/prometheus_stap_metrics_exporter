@@ -15,8 +15,8 @@ import (
 var (
 	processInfo_running_time = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Name: "process_info",
-			Help: "Information about processes that fork or clone.",
+			Name: "process_info_running_time",
+			Help: "Running time of processes that fork or clone.",
 		},
 		[]string{"name", "pid", "ppid", "niceness"},
 	)
