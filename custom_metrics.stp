@@ -1,0 +1,25 @@
+//// FORK CLONE ////
+probe syscall.fork, syscall.clone
+{
+    ttask = task_current() // long, address of task_struct
+    niceness = task_nice(ttask) // long
+    start_time_ns = task_start_time(tid()) // long in nanoseconds
+    start_time_s = start_time_ns/1000000000
+    time_now_s = gettimeofday_s()
+    running_time = time_now_s - start_time_ns / 1000000000
+    mem_usage = proc_mem_string() // string, detailed information
+    curr_cpu = cpu() // current cpu number
+    cpu_time_ms = cpu_clock_ms(curr_cpu) // long, milliseconds
+    cpu_time = cputime_to_string(cpu_clock_ms) // string, cputime
+
+    printf("FORK,CLONE@" 
+            "name=%s|" 
+            "pid=%d|"
+            "ppid=%d|"
+            "niceness=%d|"
+            "running_time=%ld|"
+            "mem_usage=\"%s\"|"
+            "cpu_time=%s\n",
+            execname(), pid(), ppid(), niceness, running_time, mem_usage, cpu_time
+    )
+}
