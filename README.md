@@ -1,4 +1,4 @@
-## Prometheus Custom Metrics: Fork and Clone Syscalls Exporter Using a SystemTap Script
+## Prometheus Custom Metrics: Fork and Clone Syscall Details Exporter Using a SystemTap Script
 
 To use this exporter, you need to have `go` and `systemtap` installed on your system. This exporter relies on **kernel debug symbols**. If they aren't available, it won't work. The kernel module created by `stap` uses kernel probes for the fork and clone system calls. Every time these events occur, it prints details to standard output, which is then directed into a pipe and consumed by this Go exporter.
 
