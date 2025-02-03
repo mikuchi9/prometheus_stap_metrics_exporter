@@ -14,13 +14,12 @@ To use this exporter, you need to have `go` and `systemtap` installed on your sy
 
    `curl http://localhost:9100/metrics`
    
-* *This was tested on Ubuntu 20.04.06 LTS*
-  *kernel: 5.4.0-204-generic*
-  *kernel debug symbols:
-  `linux-image-5.4.0-204-generic-dbgsym          5.4.0-204.224                     amd64        Signed kernel image generic`
-  *`stap -V`:*
-  `Systemtap translator/driver (version 4.2/0.176, Debian version 4.2-3ubuntu0.1 (focal))
-Copyright (C) 2005-2019 Red Hat, Inc. and others
-This is free software; see the source for copying conditions.
-tested kernel versions: 2.6.32 ... 5.4-rc6
-enabled features: AVAHI BPF LIBSQLITE3 NLS NSS`
+* *This was tested on Ubuntu 20.04.06 LTS*\
+  *kernel: 5.4.0-204-generic*\
+  *kernel debug symbols: linux-image-5.4.0-204-generic-dbgsym*\
+  *SystemTap version:*\
+  `Systemtap translator/driver (version 4.2/0.176, Debian version 4.2-3ubuntu0.1 (focal))`
+  `Copyright (C) 2005-2019 Red Hat, Inc. and others`
+  `This is free software; see the source for copying conditions.`
+  `tested kernel versions: 2.6.32 ... 5.4-rc6`
+  `enabled features: AVAHI BPF LIBSQLITE3 NLS NSS`
